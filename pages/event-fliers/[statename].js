@@ -1,5 +1,4 @@
 import {dummyData} from '../../dummy-data';
-import Image from 'next/image'
 import {stateNameList} from "../../statenames";
 
 export async function getStaticPaths() {
@@ -27,7 +26,10 @@ export default function EventFliers({stateName, eventList}) {
                 {eventList.map(event => (
                     <>
                         <section>
-                            <Image src={event.picture} alt={event.company} width="250px" height="250px"/>
+                            {/* Image component is not supported in Amplify currently - reenable once supported*/}
+                            {/*<Image src={event.picture} alt={event.company} width="250px" height="250px"/>*/}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={event.picture} alt={event.company} width="250px" height="250px"/>
                         </section>
                     </>
                 ))}
