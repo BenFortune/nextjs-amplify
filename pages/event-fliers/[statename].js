@@ -1,5 +1,22 @@
 import {dummyData} from '../../dummy-data';
 import Image from 'next/image'
+import {stateNameList} from "../../statenames";
+
+export async function getStaticPaths() {
+    const paths = stateNameList.map((statename) => ({
+        params: { statename },
+    }))
+
+    return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }) {
+    const stateName = params.statename;
+
+    const eventList = dummyData;
+
+    return {props: {stateName, eventList}}
+}
 
 export default function EventFliers({stateName, eventList}) {
 
@@ -17,12 +34,4 @@ export default function EventFliers({stateName, eventList}) {
             </main>
         </>
     );
-}
-
-export async function getServerSideProps(context) {
-    const stateName = context.params.statename;
-
-    const eventList = dummyData;
-
-    return {props: {stateName, eventList}}
 }

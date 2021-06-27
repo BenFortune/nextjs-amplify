@@ -1,4 +1,21 @@
 import {dummyData} from '../../dummy-data';
+import {stateNameList} from "../../statenames";
+
+export async function getStaticPaths() {
+    const paths = stateNameList.map((statename) => ({
+        params: { statename },
+    }))
+
+    return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }) {
+    const stateName = params.statename;
+
+    const eventList = dummyData;
+
+    return {props: {stateName, eventList}}
+}
 
 function buildAddress(address) {
     return address.split(',')[0];
@@ -50,12 +67,4 @@ export default function EventList({stateName, eventList}) {
             </table>
         </>
     );
-}
-
-export async function getServerSideProps(context) {
-    const stateName = context.params.statename;
-
-    const eventList = dummyData;
-
-    return { props: { stateName, eventList } }
 }

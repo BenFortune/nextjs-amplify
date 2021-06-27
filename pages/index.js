@@ -2,16 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-
-const stateNameList = [
-  'iowa',
-  'illinois',
-  'missouri',
-  'nebraska',
-  'minnesota',
-  'wisconsin'
-];
-
+import {stateNameList} from '../statenames';
 
 export default function Home() {
     return (
