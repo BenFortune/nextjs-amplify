@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* My Changes */
+h2{text-transform:capitalize;}
+.state-links{list-style-type:none;}
+.state-links li{margin-bottom:20px;}
+.state-links a{text-transform:capitalize;color:#069;}
+.state-links a:hover{color:#6CF;}
+
