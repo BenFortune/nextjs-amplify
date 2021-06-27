@@ -5,7 +5,7 @@ export const dummyData = [
         "guid": "9fc73839-99ae-49a5-a9ec-4e680ec5c7bb",
         "isActive": false,
         "balance": "$2,929.88",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 38,
         "eyeColor": "brown",
         "name": {
@@ -62,7 +62,7 @@ export const dummyData = [
         "guid": "48ee8f6f-7a65-4824-8477-c7ae21726bb0",
         "isActive": true,
         "balance": "$2,582.21",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 26,
         "eyeColor": "green",
         "name": {
@@ -119,7 +119,7 @@ export const dummyData = [
         "guid": "d065b9d9-bd1d-4e06-adec-1bfd73f8b04f",
         "isActive": true,
         "balance": "$1,146.14",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 28,
         "eyeColor": "blue",
         "name": {
@@ -176,7 +176,7 @@ export const dummyData = [
         "guid": "d798e64c-652b-40a3-8151-8dd61867f734",
         "isActive": true,
         "balance": "$2,289.44",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 40,
         "eyeColor": "blue",
         "name": {
@@ -233,7 +233,7 @@ export const dummyData = [
         "guid": "4ce33d8e-b474-446c-a853-cf88a0c406a7",
         "isActive": true,
         "balance": "$1,785.99",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 28,
         "eyeColor": "blue",
         "name": {
@@ -290,7 +290,7 @@ export const dummyData = [
         "guid": "a0a2e4fc-af67-4647-bb86-a5f3468fe04e",
         "isActive": false,
         "balance": "$2,250.14",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 29,
         "eyeColor": "blue",
         "name": {
@@ -347,7 +347,7 @@ export const dummyData = [
         "guid": "28eea0cd-265c-4e49-8445-5a32797dd449",
         "isActive": true,
         "balance": "$2,115.18",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 32,
         "eyeColor": "brown",
         "name": {
@@ -404,7 +404,7 @@ export const dummyData = [
         "guid": "462fd72b-ad8b-4201-a234-ac666e90273b",
         "isActive": false,
         "balance": "$2,554.43",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 39,
         "eyeColor": "brown",
         "name": {
@@ -461,7 +461,7 @@ export const dummyData = [
         "guid": "7d364bf5-dce8-4059-86a5-c51fdf229fcb",
         "isActive": false,
         "balance": "$1,690.80",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 25,
         "eyeColor": "green",
         "name": {
@@ -518,7 +518,7 @@ export const dummyData = [
         "guid": "74e92752-9a7f-4a8f-ac84-72e46beccafe",
         "isActive": false,
         "balance": "$1,647.10",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 39,
         "eyeColor": "green",
         "name": {
@@ -575,7 +575,7 @@ export const dummyData = [
         "guid": "364eb880-d5cd-4064-9f80-33227bc57641",
         "isActive": false,
         "balance": "$1,316.03",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 21,
         "eyeColor": "brown",
         "name": {
@@ -632,7 +632,7 @@ export const dummyData = [
         "guid": "b70ff49d-72e1-455b-b98a-81397f6e6bde",
         "isActive": false,
         "balance": "$1,303.80",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 36,
         "eyeColor": "blue",
         "name": {
@@ -689,7 +689,7 @@ export const dummyData = [
         "guid": "ef72ca9a-2d9e-47bc-997e-4055af78cc9d",
         "isActive": true,
         "balance": "$3,622.26",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 32,
         "eyeColor": "green",
         "name": {
@@ -746,7 +746,7 @@ export const dummyData = [
         "guid": "29ca6e9d-bcc7-4fe4-b0b9-0e5270ae9b27",
         "isActive": false,
         "balance": "$3,186.47",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 32,
         "eyeColor": "green",
         "name": {
@@ -803,7 +803,7 @@ export const dummyData = [
         "guid": "3441dad8-0e4a-448f-9b3f-d0cc5916813c",
         "isActive": true,
         "balance": "$1,699.47",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 26,
         "eyeColor": "green",
         "name": {
@@ -860,7 +860,7 @@ export const dummyData = [
         "guid": "43e0186a-284a-44ee-b6eb-daa1663d2799",
         "isActive": false,
         "balance": "$2,249.03",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 34,
         "eyeColor": "brown",
         "name": {
@@ -917,7 +917,7 @@ export const dummyData = [
         "guid": "10bfa9e8-3614-4965-8c51-d74871bbd9b7",
         "isActive": false,
         "balance": "$2,536.57",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 21,
         "eyeColor": "blue",
         "name": {
@@ -974,7 +974,7 @@ export const dummyData = [
         "guid": "3c152506-a867-4189-8ba5-4716396175a7",
         "isActive": true,
         "balance": "$3,168.50",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 26,
         "eyeColor": "green",
         "name": {
@@ -1031,7 +1031,7 @@ export const dummyData = [
         "guid": "55c42c4d-3e7e-4bb3-ad1f-4c60198dfbad",
         "isActive": true,
         "balance": "$2,563.49",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 22,
         "eyeColor": "blue",
         "name": {
@@ -1088,7 +1088,7 @@ export const dummyData = [
         "guid": "38a12028-b503-44c8-a0f9-3ea2590c95bc",
         "isActive": true,
         "balance": "$1,108.88",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 40,
         "eyeColor": "blue",
         "name": {
@@ -1145,7 +1145,7 @@ export const dummyData = [
         "guid": "bfa58215-a636-4698-8b75-039ecc40d3b5",
         "isActive": true,
         "balance": "$2,268.90",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 20,
         "eyeColor": "blue",
         "name": {
@@ -1202,7 +1202,7 @@ export const dummyData = [
         "guid": "e0756607-65c5-4c1f-a056-7dc1b88e6d27",
         "isActive": true,
         "balance": "$3,509.65",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 40,
         "eyeColor": "brown",
         "name": {
@@ -1259,7 +1259,7 @@ export const dummyData = [
         "guid": "ffe2d68d-2987-45cd-aa47-c1f13d4892fb",
         "isActive": true,
         "balance": "$1,176.23",
-        "picture": "http://placehold.it/250x250",
+        "picture": "https://via.placeholder.com/250",
         "age": 20,
         "eyeColor": "green",
         "name": {
