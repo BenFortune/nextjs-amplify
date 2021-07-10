@@ -16,18 +16,17 @@ export default function Home() {
                 <h1>Nextjs React Amplify</h1>
                 <p>Testing this out for Ricks List site conversion</p>
                 <ul className="state-links">
-                    {stateNameList.map(stateName => (
-                        <>
+                    {stateNameList.map((stateName) => (
+                        <section key={stateName}>
                             <li>
                                 <Link href="/event-lists/[statename]"
-                                      as={`event-lists/${stateName}`}><a>{stateName} Event List</a></Link>
+                                      as={`event-lists/${stateName}`} ><a>{stateName} Event List</a></Link>
                             </li>
                             <li>
                                 <Link href="/event-fliers/[statename]"
                                       as={`event-fliers/${stateName}`}><a>{stateName} Event Fliers</a></Link>
                             </li>
-                        </>
-
+                        </section>
                     ))}
                     <li>
                         <Link href={"/event-lists-files/C-IOWA-RICKS-LIST-2021.pdf"}><a>PDF</a></Link>
