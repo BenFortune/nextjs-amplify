@@ -29,6 +29,9 @@ export default function Home() {
                         </>
 
                     ))}
+                    <li>
+                        <Link href={"/event-lists-files/C-IOWA-RICKS-LIST-2021.pdf"}><a>PDF</a></Link>
+                    </li>
                 </ul>
             </main>
             <footer className={styles.footer}>
