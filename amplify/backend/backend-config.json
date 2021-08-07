@@ -1,5 +1,12 @@
 {
-  "auth": {},
+  "auth": {
+    "nextjsamplify552f4918": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
   "function": {},
   "storage": {}
 }
