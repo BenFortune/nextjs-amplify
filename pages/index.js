@@ -1,9 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from '../src/aws-exports';
+Amplify.configure(awsconfig);
 import styles from '../styles/Home.module.css'
 import {stateNameList} from '../statenames';
+// import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 export default function Home() {
+// function Home() {
     return (
         <div className={styles.container}>
             <Head>
@@ -31,7 +36,14 @@ export default function Home() {
                     <li>
                         <Link href={"/event-lists-files/C-IOWA-RICKS-LIST-2021.pdf"}><a>PDF</a></Link>
                     </li>
+                    <li>
+                        <Link href={"/sign-up"}><a>Sign Up</a></Link>
+                    </li>
+                    <li>
+                        <Link href={"/upload-event"}><a>Upload Event</a></Link>
+                    </li>
                 </ul>
+                {/*<AmplifySignOut />*/}
             </main>
             <footer className={styles.footer}>
                 <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
@@ -47,3 +59,5 @@ export default function Home() {
         </div>
     );
 }
+
+// export default withAuthenticator(Home);
