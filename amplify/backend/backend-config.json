@@ -8,5 +8,10 @@
     }
   },
   "function": {},
-  "storage": {}
+  "storage": {
+    "eventfliers": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
 }

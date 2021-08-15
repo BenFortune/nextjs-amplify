@@ -32,7 +32,6 @@ export function SignUp() {
             });
         });
 
-        event.preventDefault();
         const {name, email, password} = event.target;
 
         console.log('Sign up data', name.value, email.value, password.value);

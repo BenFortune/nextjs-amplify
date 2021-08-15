@@ -2,10 +2,10 @@ import {Auth, withSSRContext} from 'aws-amplify';
 import {UploadForm} from '../components/upload-form';
 import {SignUp} from '../components/sign-up';
 
-export default function UploadEvent({isAuthenticated}) {
+export default function UploadEvent({isUserAuthenticated}) {
     return (
         <>
-            <UploadForm authenticated={isAuthenticated}/>
+            <UploadForm authenticated={isUserAuthenticated}/>
             <SignUp />
         </>
     )
@@ -23,15 +23,10 @@ export async function getServerSideProps({req, res}) {
             props: {
                 isUserAuthenticated: true
             }
-        }
+        };
     } catch (e) {
-        console.log('Error', e);
-        return {
-            props: {
-                isUserAuthenticated: false
-            }
-        }
+        console.log('User Authenticated Error', e);
         res.writeHead(302, { Location: '/sign-in' })
-        res.end()
+        res.end();
     }
 }
