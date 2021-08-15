@@ -1,6 +1,6 @@
 {
     "identityPoolName": "nextjsamplify552f4918_identitypool_552f4918",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "nextjs552f4918",
     "userPoolName": "nextjsamplify552f4918_userpool_552f4918",
     "autoVerifiedAttributes": [
