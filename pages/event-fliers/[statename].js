@@ -14,28 +14,33 @@ export async function getStaticPaths() {
 export async function getStaticProps(req) {
     const {params} = req;
     const stateName = params.statename;
+    let imageUrl;
 
     const eventList = dummyData;
     // TODO: use api call to get event image key
     const imageKey = '/illinois/Chris-Vincent-Vmax-SX.jpg'
-    const imageUrl = Storage.get(imageKey)
+    // const imageKey = '/iowa/C:\\fakepath\\APR-ST-CHARLES-MO.jpg'
+    await Storage.get(imageKey)
         .then((result) => {
             console.log('Ben - imageurl', result, imageKey);
+            imageUrl = result;
         })
         .catch((error) => {
             console.log('Ben - error', error);
         });
-
+    console.log('image url', imageUrl)
 
     return {
         props: {
             stateName,
             eventList,
-        }
+            imageUrl
+        },
+        revalidate: 10
     }
 }
 
-export default function EventFliers({stateName, eventList}) {
+export default function EventFliers({stateName, eventList, imageUrl}) {
     const [flierList, setFlierList] = useState([])
     useEffect( () => {
         const fliers = async () => {
@@ -59,6 +64,8 @@ export default function EventFliers({stateName, eventList}) {
                     <section key={flier.key}>
                         <div>{flier.key}</div>
                         <div>{flier.eTag}</div>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={imageUrl} alt={flier.key}/>
                     </section>
                 ))}
             </main>
