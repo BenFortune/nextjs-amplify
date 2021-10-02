@@ -1,5 +1,3 @@
-import {withSSRContext} from 'aws-amplify';
-
 export function SignUp() {
     function buildBody(targetValues) {
         const {name, email, password} = targetValues;

@@ -1,0 +1,23 @@
+type Event @model {
+  id: ID!
+  date: String!
+  month: String!
+  name: String!
+  time: String
+  address: String
+  city: String!
+  state: String!
+  contact: String!
+  memo: String
+  image: String
+}
+
+type State @model {
+  name: String!
+  events: [Event]
+}
+
+type Month @model {
+  name: String!
+  events: [Event]
+}
