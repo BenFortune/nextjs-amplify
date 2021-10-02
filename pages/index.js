@@ -4,7 +4,7 @@ import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from '../src/aws-exports';
 Amplify.configure(awsconfig);
 import styles from '../styles/Home.module.css'
-import {stateNameList} from '../statenames';
+import {stateNameToAbbreviation} from '../statenames';
 // import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 export default function Home() {
@@ -21,15 +21,15 @@ export default function Home() {
                 <h1>Nextjs React Amplify</h1>
                 <p>Testing this out for Ricks List site conversion</p>
                 <ul className="state-links">
-                    {stateNameList.map((stateName) => (
+                    {Object.keys(stateNameToAbbreviation).map((stateName) => (
                         <section key={stateName}>
                             <li>
-                                <Link href="/event-lists/[statename]"
-                                      as={`event-lists/${stateName}`} ><a>{stateName} Event List</a></Link>
+                                <Link href="/event-lists/[stateName]"
+                                      as={`/event-lists/${stateName}`} ><a>{stateName} Event List</a></Link>
                             </li>
                             <li>
                                 <Link href="/event-fliers/[statename]"
-                                      as={`event-fliers/${stateName}`}><a>{stateName} Event Fliers</a></Link>
+                                      as={`/event-fliers/${stateName}`}><a>{stateName} Event Fliers</a></Link>
                             </li>
                         </section>
                     ))}

@@ -1,71 +1,59 @@
-import {dummyData} from '../../dummy-data';
-import {stateNameList} from '../../statenames';
-import {Storage} from 'aws-amplify';
-import {useEffect, useState} from 'react';
+import {stateNameList, stateNameToAbbreviation} from '../../statenames';
+import {listEvents} from '../../src/graphql/queries';
+import {API, Storage} from 'aws-amplify';
 
 export async function getStaticPaths() {
-    const paths = stateNameList.map((statename) => ({
-        params: { statename },
+    const paths = stateNameList.map((stateName) => ({
+        params: { statename: stateName.fullName },
     }));
 
     return { paths, fallback: false }
 }
 
 export async function getStaticProps(req) {
+    let flierList = [];
     const {params} = req;
-    const stateName = params.statename;
-    let imageUrl;
+    const stateName = params.statename
+    const stateNameAbbreviation = stateNameToAbbreviation[stateName]
+    const events = await API.graphql({
+        query: listEvents,
+        variables: {
+            filter: {
+                state: {
+                    eq: stateNameAbbreviation
+                }
+            }
+        }
+    });
 
-    const eventList = dummyData;
-    // TODO: use api call to get event image key
-    const imageKey = '/illinois/Chris-Vincent-Vmax-SX.jpg'
-    // const imageKey = '/iowa/C:\\fakepath\\APR-ST-CHARLES-MO.jpg'
-    await Storage.get(imageKey)
-        .then((result) => {
-            console.log('Ben - imageurl', result, imageKey);
-            imageUrl = result;
-        })
-        .catch((error) => {
-            console.log('Ben - error', error);
-        });
-    console.log('image url', imageUrl)
+    flierList = await Promise.all(events.data.listEvents.items.map(async event => {
+        if (!event.image) {
+            return event;
+        }
+
+        event.imageSrc = await Storage.get(event.image);
+
+        return event;
+    }));
 
     return {
         props: {
             stateName,
-            eventList,
-            imageUrl
+            flierList,
         },
         revalidate: 10
     }
 }
 
-export default function EventFliers({stateName, eventList, imageUrl}) {
-    const [flierList, setFlierList] = useState([])
-    useEffect( () => {
-        const fliers = async () => {
-            return await Storage.list('')
-                .then((results) => {
-                    console.log('results', results);
-                    setFlierList(results);
-                })
-                .catch((error) => {
-                    console.log('Ben - error', error);
-                });
-        }
-        fliers()
-
-    }, []);
+export default function EventFliers({stateName, flierList}) {
     return (
         <>
             <h2>{stateName} Event Fliers</h2>
             <main>
                 {flierList.map(flier => (
-                    <section key={flier.key}>
-                        <div>{flier.key}</div>
-                        <div>{flier.eTag}</div>
+                    <section key={flier.name}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={imageUrl} alt={flier.key}/>
+                        <img src={flier.imageSrc} alt={flier.key}/>
                     </section>
                 ))}
             </main>
