@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
                 }
             }
         });
-
+        console.log('Ben Events', JSON.stringify(events));
         eventList = events.data.listEvents.items;
 
         console.log('Ben - event list success', eventList);

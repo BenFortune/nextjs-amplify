@@ -36,6 +36,8 @@ export async function getStaticProps(req) {
         return event;
     }));
 
+    console.log('Ben - Flier List', flierList)
+
     return {
         props: {
             stateName,
@@ -52,8 +54,9 @@ export default function EventFliers({stateName, flierList}) {
             <main>
                 {flierList.map(flier => (
                     <section key={flier.name}>
+                        {flier.name}
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={flier.imageSrc} alt={flier.key}/>
+                        <img src={flier.imageSrc} alt={flier.name}/>
                     </section>
                 ))}
             </main>

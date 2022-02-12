@@ -31,6 +31,7 @@ export function UploadForm({authenticated}) {
 
         try {
             const flierKey = await Storage.put(`/${state.value}/${imageFileObj.name}`, imageFileObj);
+            console.log('Flier')
             const createResponse = await API.graphql({
                 query: createEvent,
                 variables: {
