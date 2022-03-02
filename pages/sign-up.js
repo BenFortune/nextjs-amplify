@@ -1,4 +1,4 @@
-import {AUTH} from "aws-amplify";
+import {Auth} from "aws-amplify";
 
 function buildBody(targetValues) {
     const {name, email, password} = targetValues;
