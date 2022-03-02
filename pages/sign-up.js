@@ -1,4 +1,4 @@
-import {withSSRContext} from "aws-amplify";
+import {AUTH} from "aws-amplify";
 
 function buildBody(targetValues) {
     const {name, email, password} = targetValues;
@@ -38,8 +38,6 @@ export default function SignUp() {
         //         res.status === 200 ? console.log('success!') : console.log('not success!')
         //     });
         // });
-
-        const {Auth} = withSSRContext({req});
 
         try {
             console.log('Ben - Call From Component');

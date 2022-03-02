@@ -3,8 +3,7 @@ import {Amplify} from 'aws-amplify';
 import awsconfig from '../src/aws-exports'
 
 Amplify.configure({
-  ...awsconfig,
-  ssr: true
+  ...awsconfig
 });
 
 function MyApp({ Component, pageProps }) {
