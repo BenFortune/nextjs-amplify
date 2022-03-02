@@ -1,4 +1,4 @@
-import {Auth, withSSRContext} from 'aws-amplify';
+import {Auth} from 'aws-amplify';
 import {UploadForm} from '../components/upload-form';
 import {SignUp} from '../components/sign-up';
 
@@ -12,8 +12,6 @@ export default function UploadEvent({isUserAuthenticated}) {
 }
 
 export async function getServerSideProps({req, res}) {
-    const {Auth} = withSSRContext({req})
-
     try {
         console.log('BEN - Attempting to Authenticate');
         const isUserAuthenticated = await Auth.currentAuthenticatedUser();
