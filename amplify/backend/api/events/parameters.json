@@ -1,7 +1,5 @@
 {
   "AppSyncApiName": "events",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false,
-  "APIKeyExpirationEpoch": 1646694000,
-  "CreateAPIKey": 1
+  "DynamoDBEnableServerSideEncryption": false
 }

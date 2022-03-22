@@ -23,8 +23,8 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7,
-              "description": "car events"
+              "apiKeyExpirationDays": 14,
+              "description": "events api key"
             }
           },
           "additionalAuthenticationProviders": []

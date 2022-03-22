@@ -53,11 +53,13 @@ export default function EventFliers({stateName, flierList}) {
             <h2>{stateName} Event Fliers</h2>
             <main>
                 {flierList.map(flier => (
-                    <section key={flier.name}>
-                        {flier.name}
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={flier.imageSrc} alt={flier.name}/>
-                    </section>
+                    flier.imageSrc ?
+                        <section key={flier.name}>
+                            {flier.name}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={flier.imageSrc} alt={flier.name}/>
+                        </section>
+                        : <br key={flier.name}/>
                 ))}
             </main>
         </>

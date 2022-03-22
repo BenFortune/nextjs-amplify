@@ -15,6 +15,9 @@ export async function getServerSideProps({req, res}) {
     try {
         console.log('BEN - Attempting to Authenticate');
         const isUserAuthenticated = await Auth.currentAuthenticatedUser();
+        // const userSession = await Auth.currentSession();
+        //
+        // console.log('USER', userSession)
 
         console.log('BEN USER AUTHENTICATED', isUserAuthenticated);
         return {
@@ -26,5 +29,11 @@ export async function getServerSideProps({req, res}) {
         console.log('User Authenticated Error', e);
         res.writeHead(302, { Location: '/sign-in' })
         res.end();
+
+        // return {
+        //     props: {
+        //         isUserAuthenticated: true
+        //     }
+        // }
     }
 }

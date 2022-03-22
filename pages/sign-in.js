@@ -20,9 +20,9 @@ export default function SignIn() {
         console.log('Ben - Sign In Data', username.value, password.value);
 
         try {
-            const {user} = await Auth.signIn(username.value, password.value);
+            const response = await Auth.signIn(username.value, password.value);
 
-            console.log('Ben - User', user);
+            console.log('Ben - User', response);
 
             router.push('/');
         } catch (e) {
