@@ -24,7 +24,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 14,
-              "description": "events api key"
+              "description": "events api"
             }
           },
           "additionalAuthenticationProviders": []

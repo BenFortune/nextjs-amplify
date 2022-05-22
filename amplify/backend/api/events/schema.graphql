@@ -11,13 +11,3 @@ type Event @model {
   memo: String
   image: String
 }
-
-type State @model {
-  name: String!
-  events: [Event]
-}
-
-type Month @model {
-  name: String!
-  events: [Event]
-}
